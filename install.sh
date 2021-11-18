@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "running some sanity checks..."
-for f in muteads.sh pausenext.sh muteads.service.template uninstall.sh
+for f in muteads.sh pausenext.sh muteads.service.template uninstall.sh; do
   if ! [ -f $f ]; then
     echo "$f does not exist. Make sure to run from the project directory."
     exit 1
@@ -13,11 +13,11 @@ echo "done running sanity chacks."
 echo "installing spotify-scripts..."
 
 echo "setting execute permission for scripts..."
-chmod a+x muteads.sh pausenext.sh uninstall.sh
+chmod +x muteads.sh pausenext.sh uninstall.sh
 echo "done setting execute permission for scripts."
 
 
-echo "adding sym-links to user's bin..."
+echo "adding scripts to user's bin..."
 if ! [ -d $HOME/bin ]; then
   echo "user does not have a bin directory; creating one"
   echo "shell must be restarted for custom commands to work"
@@ -25,9 +25,14 @@ if ! [ -d $HOME/bin ]; then
   needsrestart="yes"
 fi
 
-ln -s $HOME/bin/muteads `pwd`/muteads.sh
-ln -s $HOME/bin/pausenext `pwd`/pausenext.sh
-echo "done adding sym-links to user's bin."
+# ln -s `pwd`/muteads.sh $HOME/bin/muteads
+# ln -s `pwd`/pausenext.sh $HOME/bin/pausenext
+for s in muteads pausenext; do
+  echo -e "#!/usr/bin/env bash\n `pwd`/$s.sh &; disown -a" > $HOME/bin/$s
+  chmod +x $HOME/bin/$s
+done
+
+echo "done adding scripts to user's bin."
 
 
 echo "creating systemd service file..."
