@@ -13,7 +13,8 @@ The automatic installer adds some commands to ~/bin so that you can easily invok
 ## INSTALLING
 #### Install Dependencies
 To install dependencies, run
-```sudo apt install playerctl
+```
+sudo apt install playerctl
 ```
 
 #### Installation with install.sh
