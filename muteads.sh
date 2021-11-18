@@ -59,5 +59,5 @@ while read -r line; do
 		# amixer -q -D pulse set Master mute # mute speakers
 		setMute spotify mute # mute spotify
 	fi &
-done &
-disown -a
+done #&
+# disown -a

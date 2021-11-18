@@ -6,5 +6,5 @@ while read -r line; do
 		playerctl -p spotify pause
 		break
 	fi
-done &
-disown -a
+done #&
+# disown -a
