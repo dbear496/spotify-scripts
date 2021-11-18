@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "running some sanity checks..."
-for f in muteads.sh pauseafter.sh muteads.service.template
+for f in muteads.sh pausenext.sh muteads.service.template
   if ! [ -f $f ]; then
     echo "$f does not exist. Make sure to run from the project directory."
     exit 1
@@ -13,7 +13,7 @@ echo "done running sanity chacks."
 echo "installing spotify-scripts..."
 
 echo "setting execute permission for scripts..."
-chmod a+x muteads.sh pauseafter.sh
+chmod a+x muteads.sh pausenext.sh
 echo "done setting execute permission for scripts."
 
 
@@ -26,7 +26,7 @@ if ! [ -d $HOME/bin ]; then
 fi
 
 ln -s $HOME/bin/muteads `pwd`/muteads.sh
-ln -s $HOME/bin/pauseafter `pwd`/pauseafter.sh
+ln -s $HOME/bin/pausenext `pwd`/pausenext.sh
 echo "done adding sym-links to user's bin."
 
 
