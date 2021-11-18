@@ -7,7 +7,8 @@ This is a collection of scripts that I use for controlling/automating Spotify.
 
 
 ###INSTALLING
-To install the scripts, run the 'install.sh' script from the project directory. This script will do the following:
+To install the scripts, run the 'install.sh' script from the project directory. You may need to set the execute permission on this file in order to run it ('chmod +x install.sh').
+This script will do the following:
  - Set the execute permission for the scripts.
  - Add scripts to the user's bin directory (and create the bin directory if necessary).
  - Generate and enable a systemd service to automatically start muteads.sh on login.
