@@ -1,16 +1,24 @@
 This is a collection of scripts that I use for controlling/automating Spotify.
 
-### SCRIPTS
+## SCRIPTS
  - muteads.sh - Mutes Spotify sound while ads are playing.
  - pausenext.sh - Pauses playback when the next song starts. This is useful when you want to finish the current song before pausing.
  - install.sh - Installs the scripts automatically. (See INSTALLING section below.)
  - uninstall.sh - Uninstalls the scripts automatically. (See INSTALLING section below.)
 
+#### Convenience scripts in ~/bin
+The automatic installer adds some commands to ~/bin so that you can easily invoke the scripts from the command line or from the run-command prompt (Alt-F2). The commands in ~/bin run the associated scripts as a daemon, so the command will return immediately and leave the script running in the background.
 
-### INSTALLING
-To install the scripts, install dependencies and run the 'install.sh' script from the project directory. You may need to set the execute permission for install.sh in order to run it ('chmod +x install.sh').
-To install dependencies, run `sudo apt install playerctl`.
-The install script does the following:
+
+## INSTALLING
+#### Install Dependencies
+To install dependencies, run
+```sudo apt install playerctl
+```
+
+#### Installation with install.sh
+To do automatic installation, first set the execute permission on install.sh by running `chmod +x install.sh`; then run `./install.sh`
+The install script will do the following:
  - Sets the execute permission for the scripts.
  - Adds scripts to the user's bin directory (and create the bin directory if necessary). The scripts in the bin directory will start the scripts from the project directory as a daemon.
  - Generates and enables a systemd service to automatically start muteads.sh on login.
