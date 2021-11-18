@@ -23,5 +23,7 @@ The install script will do the following:
  - Sets the execute permission for the scripts.
  - Adds scripts to the user's bin directory (and create the bin directory if necessary). The scripts in the bin directory will start the scripts from the project directory as a daemon.
  - Generates and enables a systemd service to automatically start muteads.sh on login.
+
+
 If you do not want any of these, then do not run the install script; instead, you can install manually, or use without installing.
 To uninstall, run uninstall.sh. This will remove the scripts from the user's bin, and it will disable the systemd service. Note, it will not remove the user's bin directory (even if it was created by install.sh) because it is possible that the bin directory is used for other programs.
