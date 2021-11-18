@@ -1,12 +1,12 @@
 This is a collection of scripts that I use for controlling/automating Spotify.
 
-###SCRIPTS
+### SCRIPTS
  - muteads.sh - Mutes Spotify sound while ads are playing.
  - pausenext.sh - Pauses playback when the next song starts. This is useful when you want to finish the current song before pausing.
  - install.sh - This script installs the scripts automatically. (See INSTALLING section below.)
 
 
-###INSTALLING
+### INSTALLING
 To install the scripts, run the 'install.sh' script from the project directory. You may need to set the execute permission on this file in order to run it ('chmod +x install.sh').
 This script will do the following:
  - Set the execute permission for the scripts.
