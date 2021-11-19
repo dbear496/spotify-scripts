@@ -5,4 +5,4 @@ Description="mute Spotify ads"
 ExecStart=spotify-scripts/muteads.sh
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
