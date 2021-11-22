@@ -25,10 +25,10 @@ $ cd spotify-scripts
 
 Install dependencies:
 ```
-# apt install playerctl
+$ sudo apt install playerctl
 ```
 
-Set the execute permission of the installer:
+Set the execute permission for the installer:
 ```
 $ chmod +x install.sh
 ```
