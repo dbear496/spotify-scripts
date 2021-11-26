@@ -1,5 +1,6 @@
 This is a collection of scripts that I use for controlling/automating Spotify in Linux.
 
+
 ## SCRIPTS
  - `muteads.sh` - Mutes Spotify sound while ads are playing and unmutes when ads end.
  - `pausenext.sh` - Pauses playback when the next song starts. This is useful when you want to finish the current song before pausing.

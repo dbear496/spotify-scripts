@@ -28,7 +28,7 @@ fi
 # ln -s `pwd`/muteads.sh $HOME/bin/muteads
 # ln -s `pwd`/pausenext.sh $HOME/bin/pausenext
 for s in muteads pausenext; do
-  echo -e "#!/usr/bin/env bash\n `pwd`/$s.sh &; disown -a" > $HOME/bin/$s
+  echo -e "#!/usr/bin/env bash\n`pwd`/$s.sh & disown -a" > $HOME/bin/$s
   chmod +x $HOME/bin/$s
 done
 
