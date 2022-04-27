@@ -50,16 +50,16 @@ getSinkInput() {
 
 dbus-monitor |
 while read -r line; do
-	if [[ $line =~ "/com/spotify/track/" ]]; then {
-		sleep 1
-		# amixer -q -D pulse set Master unmute # unmute speakers
-		setMute spotify unmute # unmute spotify
+  if [[ $line =~ "/com/spotify/track/" ]]; then {
+    sleep 1
+    # amixer -q -D pulse set Master unmute # unmute speakers
+    setMute spotify unmute # unmute spotify
   } &
-elif [[ $line =~ "/com/spotify/ad/" ]]; then {
-		sleep 1
-		# amixer -q -D pulse set Master mute # mute speakers
-		setMute spotify mute # mute spotify
+  elif [[ $line =~ "/com/spotify/ad/" ]]; then {
+    sleep 1
+    # amixer -q -D pulse set Master mute # mute speakers
+    setMute spotify mute # mute spotify
   } &
-	fi
+fi
 done #&
 # disown -a
